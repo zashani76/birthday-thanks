@@ -61,7 +61,7 @@
     min-height:78vh;
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items:stretch;
     justify-content:center;
     text-align:center;
     padding:8vh 6vw 6vh;
@@ -71,6 +71,8 @@
   }
 
   .eyebrow{
+    display:block;
+    width:fit-content;
     font-size:.95rem;
     font-weight:700;
     letter-spacing:.04em;
@@ -78,10 +80,13 @@
     background:rgba(123,79,255,.1);
     padding:.4em 1em;
     border-radius:999px;
-    margin-bottom:1.4rem;
+    margin:0 auto 1.4rem;
+    text-align:center;
   }
 
   h1{
+    width:100%;
+    text-align:center;
     font-family:'Secular One', sans-serif;
     font-weight:400;
     font-size:clamp(2.6rem, 13vw, 4.6rem);
@@ -90,7 +95,7 @@
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
-    margin-bottom:.6rem;
+    margin:0 0 .6rem;
   }
 
   .heart{
@@ -103,9 +108,11 @@
   }
 
   .sub{
+    width:100%;
+    max-width:34ch;
+    margin:0 auto;
     font-size:clamp(1rem, 3.6vw, 1.2rem);
     font-weight:400;
-    max-width:34ch;
     color:var(--ink);
     opacity:.85;
     line-height:1.5;
