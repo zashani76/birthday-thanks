@@ -119,6 +119,41 @@
     text-align:center;
   }
 
+  .group-photo-wrap{
+    position:relative;
+    width:100%;
+    max-width:min(78vw, 380px);
+    margin:2.2rem auto 0;
+  }
+
+  .group-photo{
+    display:block;
+    width:100%;
+    height:auto;
+    filter:drop-shadow(0 14px 26px rgba(42,30,61,.22));
+  }
+
+  .group-placeholder{
+    display:none;
+    width:100%;
+    aspect-ratio:4/3;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:.6rem;
+    border:2px dashed rgba(123,79,255,.35);
+    border-radius:16px;
+    background:rgba(123,79,255,.06);
+    font-size:2.2rem;
+    color:var(--purple);
+  }
+  .group-placeholder span{
+    font-family:'Heebo', sans-serif;
+    font-size:.85rem;
+    font-weight:600;
+    opacity:.75;
+  }
+
   .scroll-cue{
     margin-top:3rem;
     font-size:1.6rem;
@@ -327,6 +362,12 @@
 <section class="hero">
   <span class="eyebrow">מהלב אל הלב</span>
   <p class="sub">תודה שבאתם לחגוג איתי את העובדה שהגעתי ל-50 ועדיין מתפקד לא רע בכלל 😜<br><br>אין ספק שבלעדיכם זה פשוט לא היה אותו דבר 🫶</p>
+
+  <div class="group-photo-wrap">
+    <img src="group.png" alt="כולם ביחד" class="group-photo" onerror="this.style.display='none'; document.getElementById('group-placeholder').style.display='flex';">
+    <div class="group-placeholder" id="group-placeholder">📸<span>התמונה שלכם תופיע כאן</span></div>
+  </div>
+
   <div class="scroll-cue">⌄</div>
 </section>
 
